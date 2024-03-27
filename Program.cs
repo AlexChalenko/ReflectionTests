@@ -11,6 +11,7 @@ namespace ReflectionTests
             var serialized = string.Empty;
             int testCount = 100000;
 
+            Console.WriteLine($"Количество замеров: {testCount} итераций");
             Console.WriteLine("Мой рефлекшен:");
             serialized = MakeSerializationTest(f, testCount, SimpleCSVSerializer.Serialize);
             MakeDeserializationTest(serialized, testCount, SimpleCSVSerializer.Deserialize<F>);
